@@ -38,7 +38,8 @@
         "path": "/products",
         "query": {
           "productIds": [
-            "123"
+            "123",
+            "456"
           ]
         }
       },
@@ -50,8 +51,13 @@
         "body": [
           {
             "id": "123",
-            "name": "Shoe",
+            "name": "Pen",
             "price": 234.0
+          },
+          {
+            "id": "456",
+            "name": "Pencil",
+            "price": 876.0
           }
         ],
         "responseMatchingRules": {
