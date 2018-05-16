@@ -17,7 +17,7 @@ public class ProductController {
         return new Product(productId, "Shoe", 345);
     }
 
-    @GetMapping("/products")
+    @GetMapping(value = "/products")
     public List<Product> getProducts(@RequestParam List<String> productIds) {
         List<Product> products = new ArrayList<>();
         productIds.forEach(id -> products.add(new Product(id, "Shoe", 234)));
