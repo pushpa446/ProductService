@@ -46,11 +46,8 @@ public class CategoryServiceContractTest {
         System.out.println(productService.getProductById("prod1234"));
     }
 
-    @State("HasListOfProductDetails")
+    @State("add your state name")
     public void shouldReturnListOfProductDetails(){
-        List<Product> products = new ArrayList<>();
-        products.add(new Product("prod1234", "Pen", 234));
-        products.add(new Product("prod4567", "Pencil", 876));
-        when(productService.getListOfProductsByIds(anyList())).thenReturn(products);
+        //add your code here
     }
 }
