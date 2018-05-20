@@ -15,17 +15,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.when;
 
 @RunWith(PactRunner.class)
 @Provider("product-service")
-@Consumer("dummy-consumer")
+@Consumer("penguin")
 @PactFolder(value = "./src/test/contract/provider/resources/pacts")
-public class ProductDetailsContractTest {
+public class PenguinContractTest {
 
     @TestTarget
     public MockMvcTarget target = new MockMvcTarget();
@@ -42,15 +38,7 @@ public class ProductDetailsContractTest {
 
     @State("HasProductDetails")
     public void shouldReturnProductDetails(){
-    when(productService.getProductById("123")).thenReturn(new Product("123", "Shoe", 345));
-    }
-
-    @State("HasListOfProductDetails")
-    public void shouldReturnListOfProductDetails(){
-        List<Product> products = new ArrayList<>();
-        products.add(new Product("123", "Pen", 234));
-        products.add(new Product("456", "Pencil", 876));
-        when(productService.getListOfProductsByIds(anyList())).thenReturn(products);
+    when(productService.getProductById("1234")).thenReturn(new Product("1234", "Pen", 890));
     }
 
 }
