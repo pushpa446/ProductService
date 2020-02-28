@@ -19,7 +19,7 @@
           "Content-Type": "application/json;charset=UTF-8"
         },
         "body": {
-          "id": "1234",
+          "id": 1234,
           "name": "Shoe",
           "price": 345
         },
